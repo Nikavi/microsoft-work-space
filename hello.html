@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Message</title>
+</head>
+
+<body>
+    <script>
+        // Add hello code
+        function getMessage(name) {
+            return 'Hello, ' + name + '...';
+        }
+        const message = getMessage('Ornella');
+
+        // Add setTimeout code
+        setTimeout(function () {
+            document.write(message);
+        }, 3000); // Display message after 3 seconds (3000 milliseconds)
+
+        // Add hello code
+        function someMessage(name) {
+            return 'Hello, ' + name + '...';
+        }
+        const messageAfter = someMessage('Suzanna');
+        document.write(messageAfter);
+
+        // Add setTimeout code
+        setTimeout(
+            () => { document.write('...Hello again!') },
+            2000
+        );
+
+    </script>
+</body>
+
+</html>

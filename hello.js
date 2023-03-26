@@ -25,3 +25,14 @@ console.log(`${viewerCount > 1 ? "great" : "not great"}`);
 
 const viewers = 10;
 console.log(viewers + 1);
+
+
+function displayGreeting(name, salutation = "Hello") {
+  console.log(`${salutation}, ${name}`);
+}
+
+displayGreeting('Christopher');
+// displays "Hello, Christopher"
+
+displayGreeting('Christopher', 'Hi');
+// displays "Hi, Christopher"
