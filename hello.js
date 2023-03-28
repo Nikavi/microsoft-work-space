@@ -26,15 +26,14 @@ console.log(`${viewerCount > 1 ? "great" : "not great"}`);
 const viewers = 10;
 console.log(viewers + 1);
 
-
 function displayGreeting(name, salutation = "Hello") {
   console.log(`${salutation}, ${name}`);
 }
 
-displayGreeting('Christopher');
+displayGreeting("Christopher");
 // displays "Hello, Christopher"
 
-displayGreeting('Christopher', 'Hi');
+displayGreeting("Christopher", "Hi");
 // displays "Hi, Christopher"
 
 const bracelets = [
@@ -44,3 +43,25 @@ const bracelets = [
     color: "yellow",
   },
 ];
+
+if (viewers >= 12) {
+  console.log("Time to start the stream!");
+} else {
+  console.log("Time is over");
+}
+
+if (startStream === true) {
+  console.log("Time to start");
+} else if (endStream === false) {
+  console.log("The stream end");
+}
+
+//let variable = condition ? <return this is true > : <return this is not true>;
+
+let lessonOne = 5;
+let lessonTwo = lessonsDone - 8;
+
+let showLessons =
+  lessonsDone >= lessonsTotal
+    ? console.log("Congrats")
+    : console.log("Keep going");
