@@ -36,3 +36,11 @@ displayGreeting('Christopher');
 
 displayGreeting('Christopher', 'Hi');
 // displays "Hi, Christopher"
+
+const bracelets = [
+  {
+    name: "baseblue",
+    material: "leather",
+    color: "yellow",
+  },
+];
