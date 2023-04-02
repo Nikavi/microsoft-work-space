@@ -23,8 +23,8 @@ console.log("The viewer count is " + viewerCount);
 console.log(`The viewer count is + ${viewerCount}`);
 console.log(`${viewerCount > 1 ? "great" : "not great"}`);
 
-const viewers = 10;
-console.log(viewers + 1);
+const viewer = 10;
+console.log(viewer + 1);
 
 function displayGreeting(name, salutation = "Hello") {
   console.log(`${salutation}, ${name}`);
@@ -44,7 +44,7 @@ const bracelets = [
   },
 ];
 
-if (viewers >= 12) {
+if (viewer >= 12) {
   console.log("Time to start the stream!");
 } else {
   console.log("Time is over");
@@ -58,13 +58,7 @@ if (startStream === true) {
 
 //let variable = condition ? <return this is true > : <return this is not true>;
 
-let lessonOne = 5;
-let lessonTwo = lessonsDone - 8;
 
-let showLessons =
-  lessonsDone >= lessonsTotal
-    ? console.log("Congrats")
-    : console.log("Keep going");
 
 let currentMoney = 800;
 let laptopPrice = 1000;
@@ -78,4 +72,70 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
   console.log("Can't afford a new laptop, yet!");
 }
 
-let variable = condition ? <return this if true> : <return this if false></return>
+//let variable = condition ? <return this if true> : <return this if false>;
+
+//if firstNumber is larger than secondNumber, then assign firstNumber to biggestNumber, otherwise assign secondNumber
+let firstNumber = 20;
+let secondNumber = 10;
+let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
+
+//or do like this
+let biggestNumbers;
+if (firstNumber > secondNumber) {
+  biggestNumbers = firstNumber;
+} else {
+  biggestNumbers = secondNumber;
+}
+
+let cardOne = 7;
+let cardTwo = 5;
+let sum = cardOne + cardTwo; // 15
+let cardOneBank = 7;
+let cardTwoBank = 5;
+let cardThreeBank = 6;
+let cardFourBank = 4;
+
+let cardThree = 7;
+sum += cardThree;
+if (sum > 21) {
+  console.log("You lost");
+}
+console.log(`You have ${sum} points`);
+
+let bankSum = cardOneBank + cardTwoBank + cardThreeBank + cardFourBank;
+
+if (bankSum > 21 || (sum <= 21 && sum > bankSum)) {
+  console.log("You win");
+  process.exit(1); // exit program
+} else {
+  console.log("Bank wins");
+}
+
+let viewers = 14;
+let startStream = viewers >= 10;
+let endStream = viewers < 5;
+
+console.log(startStream);
+console.log(endStream);
+
+if (viewers >= 10) {
+  console.log("Time to start the stream!");
+}
+
+if (startStream === true) {
+  console.log("Time to start the stream!");
+}
+
+if (startStream === true) {
+  console.log("Time to start the stream!");
+} else {
+  console.log("The stream will start soon!");
+}
+
+let lessonsDone = 5;
+let lessonsTotal = 8 - lessonsDone;
+
+let showLessons =
+  lessonsDone >= lessonsTotal
+    ? console.log("Congrats")
+    : console.log("Keep going");
