@@ -65,3 +65,4 @@ let showLessons =
   lessonsDone >= lessonsTotal
     ? console.log("Congrats")
     : console.log("Keep going");
+
