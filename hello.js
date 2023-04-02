@@ -77,3 +77,5 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
   //Condition was true. Code in this block will run.
   console.log("Can't afford a new laptop, yet!");
 }
+
+let variable = condition ? <return this if true> : <return this if false></return>
