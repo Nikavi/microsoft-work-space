@@ -58,8 +58,6 @@ if (startStream === true) {
 
 //let variable = condition ? <return this is true > : <return this is not true>;
 
-
-
 let currentMoney = 800;
 let laptopPrice = 1000;
 let laptopDiscountPrice = laptopPrice - laptopPrice * 0.2; //Laptop price at 20 percent off
@@ -139,3 +137,148 @@ let showLessons =
   lessonsDone >= lessonsTotal
     ? console.log("Congrats")
     : console.log("Keep going");
+
+const bandMemberName = { name: "Justin" };
+const bandPossition = { possition: "Lead Star" };
+
+const bandMember = { ...bandMemberName, ...bandPossition };
+console.log(bandMember);
+
+// while loops
+let student = 0;
+let seats = 30;
+
+while (student < seats) {
+  student++;
+  console.log(student);
+}
+
+// do while loops
+
+// do {
+// "Do this thing"
+// } while (condition)
+
+let studentCount = 0;
+
+do {
+  console.log("Hello Students");
+} while (studentCount > 10);
+
+// for loops
+
+// for (start here; condition; update) {
+// "Do this thing"
+// }
+
+const studentName = ["Nick", "AJ", "Kevin", "Brain", "Howie"];
+
+// print each student in an array
+
+for (let i = 0; i < studentName.length; i++) {
+  console.log(studentName[i]);
+}
+
+// loop over an array then print
+for (student in studentName) {
+  console.log(studentName[student]);
+}
+
+students.forEach((student) => {
+  console.log(student);
+});
+
+myPromise
+  .then(DoThis)
+  .then(DoThisNext)
+  .then(DoThisAfter)
+  .catch(DoThisIfItBreaks);
+
+async function functionName() {
+  await DoThis;
+}
+
+try {
+  thisFunction();
+} catch (error) {
+  console.error(error);
+}
+
+// Fetch API
+// Get Pokemon Data
+async function getPokemonData() {
+  const responce = await fetch("https://pokeapi.co/api/v2/pokemon/");
+  const data = await responce.json();
+  console.log(data);
+}
+
+getPokemonData();
+
+// Limit the Results and Print them
+
+// Limit the result and print out the Names and URLS of each pokemons
+
+let pokemonData = [];
+
+async function getPokemonData() {
+  try {
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=8");
+    const responseData = await response.json();
+    pokemonData = responseData.results;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+getPokemonData()
+  .then(() => {
+    pokemonData.forEach((pokemon) => {
+      console.log(`Name: ${pokemon.name}, URL: ${pokemon.url}`);
+    });
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+// Get Data for a Specific Pokempon
+
+let pokemonDat = [];
+
+async function fetchPokemon() {
+  try {
+    const responce = await fetch(
+      "https://pokeapi.co/api/v2/pokemon/bulbassaur"
+    );
+    const data = await responce.json();
+    pokemonDat.push(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+fetchPokemon();
+
+// Get Pokemon Data in Detail - print out the details we are interested in:
+
+let pokeMonData = [];
+
+async function getPokemonData() {
+  try {
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur");
+    const responseData = await response.json();
+    pokeMonData.push(responseData); // push into the array
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+getPokemonData()
+  .then(() => {
+    const pokemon = pokemonData[0]; // get the first element from the array
+    console.log(`Name: ${pokemon.name}`); // print the name to the console
+    console.log(`Type: ${pokemon.types[0].type.name}`); // print the type to the console
+    console.log(`Image: ${pokemon.sprites.front_default}`); //print the image to the console
+  })
+  .catch((error) => {
+    console.error(error);
+  });
